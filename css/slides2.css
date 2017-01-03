@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+.slides {
+    padding: 0;
+    /*width: 100%;*/
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    /*width: 609px;*/
+    /*height: 420px;*/
+    height: 100%;
+    display: block;
+    position: absolute;
+
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.nav label {
+    width: 60px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0.6;
+    z-index: 9;
+    cursor: pointer;
+
+    /* transition: opacity .2s; */
+
+    color: #000;
+    font-size: 60pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    /*background-color: rgba(0, 0, 0, .3);*/
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: -60px; }
+.nav .prev { left: -60px; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    /* transform: scale(1); */
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(255, 103, 96, 0.4);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-11:checked ~ .nav-dots label#img-dot-11,
+input#img-12:checked ~ .nav-dots label#img-dot-12,
+input#img-13:checked ~ .nav-dots label#img-dot-13,
+input#img-14:checked ~ .nav-dots label#img-dot-14,
+input#img-15:checked ~ .nav-dots label#img-dot-15,
+input#img-21:checked ~ .nav-dots label#img-dot-21,
+input#img-22:checked ~ .nav-dots label#img-dot-22,
+input#img-23:checked ~ .nav-dots label#img-dot-23,
+input#img-24:checked ~ .nav-dots label#img-dot-24,
+input#img-25:checked ~ .nav-dots label#img-dot-25,
+input#img-31:checked ~ .nav-dots label#img-dot-31,
+input#img-32:checked ~ .nav-dots label#img-dot-32,
+input#img-33:checked ~ .nav-dots label#img-dot-33,
+input#img-34:checked ~ .nav-dots label#img-dot-34,
+input#img-35:checked ~ .nav-dots label#img-dot-35 ,
+input#img-36:checked ~ .nav-dots label#img-dot-36  {
+	background: rgba(255, 103, 96, 1);
+}
